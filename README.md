@@ -1,3 +1,3 @@
-# message
+# messages-api
 
-angular architecture
+Store and retrive messages in json
