@@ -1,12 +1,16 @@
 import { MessageRepository } from '@repositories/message.repository';
 
-export class MessageService {
-  messagesRepo: MessageRepository;
+interface Repository {
+  findOne(id: string);
+  findAll();
+  createMessge(content: string);
+}
 
-  constructor() {
-    // Service is creating its own dependencies
-    // DONT DO IN REAL APPS
-    this.messagesRepo = new MessageRepository();
+export class MessageService {
+  messagesRepo: Repository;
+
+  constructor(repo: Repository) {
+    this.messagesRepo = repo;
   }
 
   findOne(id: string) {
@@ -18,6 +22,6 @@ export class MessageService {
   }
 
   createMessage(content: string) {
-    return this.messagesRepo.create(content);
+    return this.messagesRepo.createMessge(content);
   }
 }

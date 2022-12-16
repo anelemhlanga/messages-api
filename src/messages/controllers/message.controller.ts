@@ -7,14 +7,19 @@ import {
   Post,
   NotFoundException,
 } from '@nestjs/common';
-import { MessageService } from '@services/message.service';
+
+interface Service {
+  findOne(id: string);
+  createMessage(content: string);
+  findAll();
+}
 
 @Controller('messages')
 export class MessageController {
-  messageService: MessageService;
+  messageService: Service;
 
-  constructor() {
-    this.messageService = new MessageService();
+  constructor(service: Service) {
+    this.messageService = service;
   }
 
   @Get()
