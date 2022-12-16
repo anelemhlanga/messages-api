@@ -11,7 +11,10 @@
     "outDir": "./dist",
     "baseUrl": "./src",
     "paths": {
-      "@dto/*": ["messages/dtos/*"]
+      "@dto/*": ["messages/dtos/*"],
+      "@controllers/*": ["messages/controllers/*"],
+      "@services/*": ["messages/services/*"],
+      "@repositories/*": ["messages/repositories/*"]
     },
     "incremental": true,
     "skipLibCheck": true,
