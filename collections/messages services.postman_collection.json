@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "6e007ee2-b431-4793-89a9-62b61bee21ba",
+		"name": "messages services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15585319"
+	},
+	"item": [
+		{
+			"name": "Get Messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/messages",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"First Message\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/messages",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get MessageById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/messages/:id",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"messages",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "875"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
