@@ -1,7 +1,7 @@
+import { MessageController } from '@controllers/message.controller';
 import { Module } from '@nestjs/common';
-import { MessagesController } from './messages.controller';
 
 @Module({
-  controllers: [MessagesController],
+  controllers: [MessageController],
 })
 export class MessagesModule {}
